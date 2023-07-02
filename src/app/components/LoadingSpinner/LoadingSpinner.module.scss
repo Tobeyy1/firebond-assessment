@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--black);
+
+  p {
+    z-index: 4;
+  }
+}
+
+.image__container {
+  position: relative;
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 99px;
+  overflow: hidden;
+  animation: pulse 1s linear infinite;
+
+  .image {
+    object-fit: cover;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.3;
+  }
+  100% {
+    scale: 1;
+  }
+}

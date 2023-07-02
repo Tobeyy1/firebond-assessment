@@ -1,0 +1,54 @@
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --primary: #0e0d0b;
+  --secondary: #e2e2e2;
+  --tertiary: #fe702a;
+  --tertiary-dark: #53240d;
+  --black: #000;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  /* border: 3px solid var(--secondary-dark); */
+  border: 3px solid transparent;
+  width: 0.5rem;
+  border-radius: 50px;
+}
+
+input,
+textarea,
+select,
+button {
+  touch-action: manipulation;
+}
