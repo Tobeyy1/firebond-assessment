@@ -11,6 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaCrown } from "react-icons/fa";
 import { playersDataActions } from "@/store/store";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
+import { useRouter } from "next/navigation";
 
 interface TournamentProps {}
 
@@ -25,6 +26,7 @@ const Tournament: FunctionComponent<TournamentProps> = () => {
   );
 
   const dispatch = useDispatch();
+  const router = useRouter();
 
   //Variables for Animation
   const variants = {
@@ -47,6 +49,7 @@ const Tournament: FunctionComponent<TournamentProps> = () => {
     //Handles the initial retrieval of data from the backend
     const tournamentID = sessionStorage.getItem("tournamentID");
     console.log(tournamentID);
+    if (!tournamentID) router.push("/");
     setIsLoading(true);
 
     // const testData = [

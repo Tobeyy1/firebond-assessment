@@ -38,13 +38,13 @@ const Bracket: FunctionComponent<BracketProps> = ({
         allData.push(Array(allData[index - 1].length / 2).fill(""));
       }
     }
-    if (overallTournamentData.length > 0) {
+    if (allData.length > 0) {
+      // console.log("ADDING WINNER SECTION");
       allData.push(Array(1).fill(""));
+      console.log(allData);
     }
-    console.log("Bracket AllData 1: ", allData);
     if (overallTournamentData.length === 0) {
-      console.log("Bracket Editing Parent Data");
-      console.log("Bracket AllData 2: ", allData);
+      // console.log("SETTING OVERALL DATA");
       setOverallTournamentData(allData);
     }
   }, [numberOfRounds, playersGroupedData, setOverallTournamentData]);
@@ -52,7 +52,6 @@ const Bracket: FunctionComponent<BracketProps> = ({
   useEffect(() => {
     //Ensures that changes made to the parent component data are reflected in the bracket
     setOverallData(overallTournamentData);
-    console.log("RENDERING BRACKET");
   }, [overallTournamentData, setOverallData]);
 
   useEffect(() => {
